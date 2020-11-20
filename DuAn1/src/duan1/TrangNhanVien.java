@@ -125,8 +125,6 @@ public class TrangNhanVien extends javax.swing.JFrame {
         );
 
         jPanel4.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 840, -1));
-
-        jTextField1.setText("Từ khóa");
         jPanel4.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 20, 200, 40));
 
         jButton6.setText("Tìm kiếm");
