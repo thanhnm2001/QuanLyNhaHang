@@ -22,6 +22,8 @@ public class TrangChu extends javax.swing.JFrame {
      */
     public TrangChu() {
         initComponents();
+        setLocationRelativeTo(null);
+        setSize(858,610);
 //        ImageIcon icon1=new ImageIcon("src//image//nen.jpg");
 //        Image icon=icon1.getImage();
 //                ImageIcon icon2 = new ImageIcon(icon.getScaledInstance(lblImage.getWidth(), lblImage.getHeight(), Image.SCALE_SMOOTH));
@@ -50,13 +52,12 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1042, 683));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(204, 204, 0));
         jLabel4.setText("Welcome, ");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 51));
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N

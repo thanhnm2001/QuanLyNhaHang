@@ -267,6 +267,7 @@ public class TrangMenu extends javax.swing.JFrame {
         jButton7.setBackground(new java.awt.Color(35, 35, 35));
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setText("Súp Cua \n30,000\n");
+        jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel4.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 151, 76));
 
         jButton8.setBackground(new java.awt.Color(35, 35, 35));

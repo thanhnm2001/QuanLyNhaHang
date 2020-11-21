@@ -7,15 +7,17 @@ package duan1;
 
 /**
  *
- * @author Administrator
+ * @author dell
  */
-public class Test {
+public class a {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.err.println("Dong Van Tuan");
+        //commet
     }
     
 }

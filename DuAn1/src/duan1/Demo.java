@@ -9,7 +9,7 @@ package duan1;
  *
  * @author Administrator
  */
-public class Test {
+public class Demo {
 
     /**
      * @param args the command line arguments
