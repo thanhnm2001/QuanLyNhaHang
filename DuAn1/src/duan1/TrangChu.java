@@ -23,7 +23,7 @@ public class TrangChu extends javax.swing.JFrame {
     public TrangChu() {
         initComponents();
         setLocationRelativeTo(null);
-        setSize(858,610);
+
 //        ImageIcon icon1=new ImageIcon("src//image//nen.jpg");
 //        Image icon=icon1.getImage();
 //                ImageIcon icon2 = new ImageIcon(icon.getScaledInstance(lblImage.getWidth(), lblImage.getHeight(), Image.SCALE_SMOOTH));
