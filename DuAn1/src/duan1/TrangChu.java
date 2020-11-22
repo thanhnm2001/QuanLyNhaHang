@@ -103,6 +103,7 @@ public class TrangChu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+<<<<<<< OURS
 
 <<<<<<< HEAD
 
@@ -132,6 +133,8 @@ public class TrangChu extends javax.swing.JFrame {
     private void btnBanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBanActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBanActionPerformed
+=======
+>>>>>>> THEIRS
 
 
 =======
