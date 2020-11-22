@@ -5,6 +5,13 @@
  */
 package duan1;
 
+import Class.ThongTinMon;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+
 /**
  *
  * @author Chung
@@ -14,8 +21,20 @@ public class TrangMenu2 extends javax.swing.JFrame {
     /**
      * Creates new form TrangMenu2
      */
+    ArrayList<ThongTinMon> lstmon = new ArrayList<>();
+
     public TrangMenu2() {
         initComponents();
+        setLocationRelativeTo(null);
+        ThongTin();
+        btnMon1.setText(lstmon.get(0).getTenmon() + " " + lstmon.get(0).getDongia());
+        btnMon2.setText(lstmon.get(1).getTenmon() + " " + lstmon.get(1).getDongia());
+        btnMon3.setText(lstmon.get(2).getTenmon() + " " + lstmon.get(2).getDongia());
+        btnMon4.setText(lstmon.get(3).getTenmon() + " " + lstmon.get(3).getDongia());
+        btnMon5.setText(lstmon.get(4).getTenmon() + " " + lstmon.get(4).getDongia());
+        btnMon6.setText(lstmon.get(5).getTenmon() + " " + lstmon.get(5).getDongia());
+        btnMon7.setText(lstmon.get(6).getTenmon() + " " + lstmon.get(6).getDongia());
+
     }
 
     /**
@@ -46,18 +65,18 @@ public class TrangMenu2 extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton31 = new javax.swing.JButton();
+        btnMon7 = new javax.swing.JButton();
+        btnMon1 = new javax.swing.JButton();
+        btnMon4 = new javax.swing.JButton();
+        btnMon10 = new javax.swing.JButton();
+        btnMon8 = new javax.swing.JButton();
+        btnMon5 = new javax.swing.JButton();
+        btnMon2 = new javax.swing.JButton();
+        btnMon11 = new javax.swing.JButton();
+        btnMon3 = new javax.swing.JButton();
+        btnMon6 = new javax.swing.JButton();
+        btnMon9 = new javax.swing.JButton();
+        btnMon12 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jButton22 = new javax.swing.JButton();
         jButton23 = new javax.swing.JButton();
@@ -259,66 +278,58 @@ public class TrangMenu2 extends javax.swing.JFrame {
         jLabel1.setText("Món Chính");
         jPanel4.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 98, 33));
 
-        jButton6.setBackground(new java.awt.Color(35, 35, 35));
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Rượu Mơ 50,000");
-        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 151, 76));
+        btnMon7.setBackground(new java.awt.Color(35, 35, 35));
+        btnMon7.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel4.add(btnMon7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 151, 76));
 
-        jButton7.setBackground(new java.awt.Color(35, 35, 35));
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("Lavie 10,000");
-        jPanel4.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 151, 76));
+        btnMon1.setBackground(new java.awt.Color(35, 35, 35));
+        btnMon1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel4.add(btnMon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 151, 76));
 
-        jButton8.setBackground(new java.awt.Color(35, 35, 35));
-        jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setText("Trà Đá 8,000");
-        jPanel4.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 151, 76));
+        btnMon4.setBackground(new java.awt.Color(35, 35, 35));
+        btnMon4.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel4.add(btnMon4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 151, 76));
 
-        jButton9.setBackground(new java.awt.Color(35, 35, 35));
-        jButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel4.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 151, 76));
+        btnMon10.setBackground(new java.awt.Color(35, 35, 35));
+        btnMon10.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel4.add(btnMon10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 151, 76));
 
-        jButton11.setBackground(new java.awt.Color(35, 35, 35));
-        jButton11.setForeground(new java.awt.Color(255, 255, 255));
-        jButton11.setText("Rượu Nếp 50,000");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        btnMon8.setBackground(new java.awt.Color(35, 35, 35));
+        btnMon8.setForeground(new java.awt.Color(255, 255, 255));
+        btnMon8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                btnMon8ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 151, 76));
+        jPanel4.add(btnMon8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 151, 76));
 
-        jButton12.setBackground(new java.awt.Color(35, 35, 35));
-        jButton12.setForeground(new java.awt.Color(255, 255, 255));
-        jButton12.setText("Vodka 60,000");
-        jPanel4.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 151, 76));
+        btnMon5.setBackground(new java.awt.Color(35, 35, 35));
+        btnMon5.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel4.add(btnMon5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 151, 76));
 
-        jButton13.setBackground(new java.awt.Color(35, 35, 35));
-        jButton13.setForeground(new java.awt.Color(255, 255, 255));
-        jButton13.setText("Coca Cola 25,000");
-        jPanel4.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 151, 76));
+        btnMon2.setBackground(new java.awt.Color(35, 35, 35));
+        btnMon2.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel4.add(btnMon2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 151, 76));
 
-        jButton14.setBackground(new java.awt.Color(35, 35, 35));
-        jButton14.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel4.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 151, 76));
+        btnMon11.setBackground(new java.awt.Color(35, 35, 35));
+        btnMon11.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel4.add(btnMon11, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 151, 76));
 
-        jButton19.setBackground(new java.awt.Color(35, 35, 35));
-        jButton19.setForeground(new java.awt.Color(255, 255, 255));
-        jButton19.setText("7Up 25,000");
-        jPanel4.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, 151, 76));
+        btnMon3.setBackground(new java.awt.Color(35, 35, 35));
+        btnMon3.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel4.add(btnMon3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, 151, 76));
 
-        jButton20.setBackground(new java.awt.Color(35, 35, 35));
-        jButton20.setForeground(new java.awt.Color(255, 255, 255));
-        jButton20.setText("Vang Đỏ 100,000");
-        jPanel4.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, 151, 76));
+        btnMon6.setBackground(new java.awt.Color(35, 35, 35));
+        btnMon6.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel4.add(btnMon6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, 151, 76));
 
-        jButton21.setBackground(new java.awt.Color(35, 35, 35));
-        jButton21.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel4.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 151, 76));
+        btnMon9.setBackground(new java.awt.Color(35, 35, 35));
+        btnMon9.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel4.add(btnMon9, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 151, 76));
 
-        jButton31.setBackground(new java.awt.Color(35, 35, 35));
-        jButton31.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel4.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, 151, 76));
+        btnMon12.setBackground(new java.awt.Color(35, 35, 35));
+        btnMon12.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel4.add(btnMon12, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, 151, 76));
 
         jPanel3.setOpaque(false);
 
@@ -384,11 +395,11 @@ public class TrangMenu2 extends javax.swing.JFrame {
                 .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(13, 13, 13)
                 .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -436,11 +447,15 @@ public class TrangMenu2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
-        // TODO add your handling code here:
+        TrangMenu tm = new TrangMenu();
+        tm.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton26ActionPerformed
 
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
-        // TODO add your handling code here:
+        TrangMenu3 tm3 = new TrangMenu3();
+        tm3.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton28ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
@@ -448,15 +463,18 @@ public class TrangMenu2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
-        // TODO add your handling code here:
+        ThemMon tm = new ThemMon();
+        tm.setVisible(true);
     }//GEN-LAST:event_jButton23ActionPerformed
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
-        // TODO add your handling code here:
+        SuaMon sm = new SuaMon();
+        sm.setVisible(true);
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
-        // TODO add your handling code here:
+        XoaMon xm = new XoaMon();
+        xm.setVisible(true);
     }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
@@ -467,9 +485,9 @@ public class TrangMenu2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton30ActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void btnMon8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMon8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_btnMon8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -507,15 +525,20 @@ public class TrangMenu2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnMon1;
+    private javax.swing.JButton btnMon10;
+    private javax.swing.JButton btnMon11;
+    private javax.swing.JButton btnMon12;
+    private javax.swing.JButton btnMon2;
+    private javax.swing.JButton btnMon3;
+    private javax.swing.JButton btnMon4;
+    private javax.swing.JButton btnMon5;
+    private javax.swing.JButton btnMon6;
+    private javax.swing.JButton btnMon7;
+    private javax.swing.JButton btnMon8;
+    private javax.swing.JButton btnMon9;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
@@ -526,13 +549,8 @@ public class TrangMenu2 extends javax.swing.JFrame {
     private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -547,4 +565,24 @@ public class TrangMenu2 extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+    private void ThongTin() {
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            String url = "jdbc:sqlserver://DESKTOP-QPFGD23:1433;databaseName=QLNH";
+            Connection con = DriverManager.getConnection(url, "sa", "123");
+            String sql = "select tenmon, dongia, mama from monan ";
+            Statement stm = con.createStatement();
+            ResultSet rs = stm.executeQuery(sql);
+            while (rs.next()) {
+                String mama = rs.getString(3);
+                String tenmon = rs.getString(1);
+                float dongia = rs.getFloat(2);
+                ThongTinMon tt = new ThongTinMon(mama, tenmon, dongia);
+                lstmon.add(tt);
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
