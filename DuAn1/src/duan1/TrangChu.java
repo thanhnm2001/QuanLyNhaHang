@@ -124,7 +124,7 @@ public class TrangChu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
+
     private void btnMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuMouseClicked
         this.dispose();
         TrangMenu TM =new TrangMenu();
@@ -137,10 +137,10 @@ public class TrangChu extends javax.swing.JFrame {
         TNV.setVisible(true);
     }                                           
 
-=======
+
     private void btnNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNhanVienActionPerformed
         // TODO add your handling code here:
-        new TrangNhanVien().setVisible(true);
+      
     }//GEN-LAST:event_btnNhanVienActionPerformed
 
     private void btnDangXuatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDangXuatActionPerformed
@@ -152,7 +152,7 @@ public class TrangChu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBanActionPerformed
 
->>>>>>> 3fa7b1da14c6021c7267c991c7d6fd717ced01e
+
     /**
      * @param args the command line arguments
      */

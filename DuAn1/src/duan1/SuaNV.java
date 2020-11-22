@@ -6,6 +6,8 @@
 package duan1;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,13 +19,22 @@ public class SuaNV extends javax.swing.JFrame {
      * Creates new form SuaNV
      */
     Connection cn;
-    public SuaNV() {
+
+    public SuaNV(String manv, String hoten, String ngaysinh,String sdt, String cmt) {
         initComponents();
         setLocationRelativeTo(null);
-         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-         cn = Helper.ketnoi("QLNH");
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        cn = Helper.ketnoi("QLNH");
+
+        txtmanv.setText(manv);
+        txthoten.setText(hoten);
+        txtngaysinh.setText(ngaysinh);
+        txtsodt.setText(sdt);
+        txtsocmt.setText(cmt);
+     
     }
 
+   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -99,7 +110,7 @@ public class SuaNV extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 51, 51));
-        jButton1.setText("Thêm Mới");
+        jButton1.setText("Chỉnh Sửa");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -191,43 +202,69 @@ public class SuaNV extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-  
+
+        try {
+
+            String hoten = txthoten.getText();
+            String sodt = txtsodt.getText();
+            String ngaysinh = txtngaysinh.getText();
+            String cmt = txtsocmt.getText();
+            String manv = txtmanv.getText();      
+            //sua tren csdl
+            String sql = "update nhanvien\n"
+                    + "set hoten =?,ngaysinh =?,sdt=?,socmt=?\n"
+                    + "where manv =?";
+            PreparedStatement pstm = cn.prepareStatement(sql);
+            pstm.setString(1, hoten);
+            pstm.setString(2, ngaysinh);     
+            pstm.setString(3, sodt);
+            pstm.setString(4,cmt);
+            pstm.setString(5, manv);
+            pstm.executeUpdate();
+                JOptionPane.showMessageDialog(this, "Sửa thanh cong");         
+          
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this,"loi sua");
+        }
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SuaNV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SuaNV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SuaNV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SuaNV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SuaNV().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(SuaNV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(SuaNV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(SuaNV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(SuaNV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new SuaNV().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -251,4 +288,5 @@ public class SuaNV extends javax.swing.JFrame {
     private javax.swing.JTextField txtsocmt;
     private javax.swing.JTextField txtsodt;
     // End of variables declaration//GEN-END:variables
+
 }

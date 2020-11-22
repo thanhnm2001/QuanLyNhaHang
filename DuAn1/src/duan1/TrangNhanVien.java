@@ -305,7 +305,24 @@ public class TrangNhanVien extends javax.swing.JFrame {
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         // TODO add your handling code here:
-        new SuaNV().setVisible(true);
+         try {
+              int index = tblnv.getSelectedRow();
+              if(index >=0){
+ 
+        String manv = tblnv.getValueAt(index, 1) + "";
+        String hoten =  tblnv.getValueAt(index, 2) + "";
+        String ngaysinh = tblnv.getValueAt(index, 3) + "";
+        String sdt = tblnv.getValueAt(index, 4) + "";
+   
+         String cmt  = tblnv.getValueAt(index, 6) + "";
+        new SuaNV(manv, hoten, ngaysinh, sdt,cmt).setVisible(true);
+        
+      }else{
+          JOptionPane.showMessageDialog(this,"Moi ban chon dong can hien thi");
+      }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     
     }//GEN-LAST:event_jButton22ActionPerformed
 

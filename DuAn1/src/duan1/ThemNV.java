@@ -270,22 +270,6 @@ public class ThemNV extends javax.swing.JFrame {
     private javax.swing.JTextField txtsocmt;
     private javax.swing.JTextField txtsodt;
     // End of variables declaration//GEN-END:variables
-  public void showdetail() {
-
-        NhanVienclass s = lstnv.get(index);
-        txthoten.setText(s.getHoten());
-        txtngaysinh.setText(s.getNgaysinh());
-        txtsocmt.setText(s.getSocmt());
-        txtsodt.setText(s.getSdt());
-        txtmanv.setText(s.getManv());
-        txtpass.setText(s.getPassword());
-         if (s.isChucvu() == true) {
-            rdoql.setSelected(true);
-        } else {
-            rdonv.setSelected(true);
-        }
-//        txthinh.setText(s.getHinh());
-    }
 
     private void add() {
         try {
