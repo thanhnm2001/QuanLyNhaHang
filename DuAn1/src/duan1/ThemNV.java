@@ -295,11 +295,11 @@ public class ThemNV extends javax.swing.JFrame {
             String cmt = txtsocmt.getText();
             String manv = txtmanv.getText();
             String matkhau = txtpass.getText();
-            boolean chucvu;
+            boolean chucvu = true;
             if (rdoql.isSelected()) {
                 chucvu = true;
             } else {
-                chucvu = true;
+                chucvu = false;
             }
             String sql = "insert into nhanvien\n"
                     + "values(?,?,?,?,?,?,?)";
@@ -313,18 +313,11 @@ public class ThemNV extends javax.swing.JFrame {
             pstm.setString(6, matkhau);
             pstm.setString(7, cmt);
             pstm.executeUpdate();
-            int row = pstm.executeUpdate();
-            if (row > 0) {
-                JOptionPane.showMessageDialog(this, "Them thanh cong");
-                //xu ly sau khi them
-                index = lstnv.size() - 1;
-                showdetail();
-            } else {
-//                 JOptionPane.showMessageDialog(this, "Khong them dc dong nao");
-            }
+         
+        JOptionPane.showMessageDialog(this,"Them thanh cong");
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Loi add");
-            e.printStackTrace();
+           JOptionPane.showMessageDialog(this, "Loi add");
+          
         }
     }
 
