@@ -68,41 +68,21 @@ public class TrangChu extends javax.swing.JFrame {
         btnNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/nhanvien.png"))); // NOI18N
         btnNhanVien.setBorderPainted(false);
         btnNhanVien.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/nhanvien1.png"))); // NOI18N
-        btnNhanVien.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNhanVienActionPerformed(evt);
-            }
-        });
         getContentPane().add(btnNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 280, 180, 90));
 
         btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/menu.png"))); // NOI18N
         btnMenu.setBorderPainted(false);
         btnMenu.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/menu1.png"))); // NOI18N
-        btnMenu.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnMenuMouseClicked(evt);
-            }
-        });
         getContentPane().add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 140, 180, 90));
 
         btnBan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ban.png"))); // NOI18N
         btnBan.setBorderPainted(false);
         btnBan.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ban1.png"))); // NOI18N
-        btnBan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBanActionPerformed(evt);
-            }
-        });
         getContentPane().add(btnBan, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 280, 180, 90));
 
         btnDangXuat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/dangxuat.png"))); // NOI18N
         btnDangXuat.setBorderPainted(false);
         btnDangXuat.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/dangxuat1.png"))); // NOI18N
-        btnDangXuat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDangXuatActionPerformed(evt);
-            }
-        });
         getContentPane().add(btnDangXuat, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, 180, 90));
 
         btnDanhGia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/danhgia.png"))); // NOI18N
@@ -124,6 +104,7 @@ public class TrangChu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
 
     private void btnMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuMouseClicked
         this.dispose();
@@ -153,6 +134,8 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBanActionPerformed
 
 
+=======
+>>>>>>> 9dd237efb05d3154471694d8a6123d80884ebb4e
     /**
      * @param args the command line arguments
      */

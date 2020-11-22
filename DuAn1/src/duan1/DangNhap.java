@@ -148,45 +148,45 @@ public class DangNhap extends javax.swing.JFrame {
     }//GEN-LAST:event_txtMaNVActionPerformed
 
     private void btnDangNhapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDangNhapActionPerformed
-        //          String user=txtMaNV.getText();
-        ////          String password=txtPassword.getPassword().toString();
-        //          //mật khẩu bị mã hóa
-        //          String password=new String(txtPassword.getPassword());
-        //          int vaitro=10;
-        //          String sql="Select * from nhanvien where MANV=? and MatKhau=?";
-        //
-        //        try {
-            //            PreparedStatement ps=cn.prepareCall(sql);
-            //            ps.setString(1, user);
-            //            ps.setString(2, password);
-            //            ResultSet rs=ps.executeQuery();
-            //            while(rs.next()){
-                //                vaitro=rs.getInt(4);
-                //
-                //            }
-            //            if(vaitro==1){
-                //                  this.dispose();
-                //                Form f1=new Form(vaitro);
-                //                f1.setVisible(true);
-                //
-                //
-                //
-                //
-                //            }else if(vaitro==0){
-                //                 this.dispose();
-                //                 Form f1=new Form(vaitro);
-                //                f1.setVisible(true);
-                //
-                //
-                //
-                //            }else{
-                //                JOptionPane.showMessageDialog(this, "Tài khoản hoặc mật khẩu không đúng");
-                //
-                //            }
-            //
-            //        } catch (SQLException ex) {
-            //            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-            //        }
+//                  String user=txtMaNV.getText();
+//        //          String password=txtPassword.getPassword().toString();
+//                  //mật khẩu bị mã hóa
+//                  String password=new String(txtPassword.getPassword());
+//                  int vaitro=10;
+//                  String sql="Select * from nhanvien where MANV=? and MatKhau=?";
+//        
+//                try {
+//                        PreparedStatement ps=cn.prepareCall(sql);
+//                        ps.setString(1, user);
+//                        ps.setString(2, password);
+//                        ResultSet rs=ps.executeQuery();
+//                        while(rs.next()){
+//                                vaitro=rs.getInt(4);
+//                
+//                            }
+//                        if(vaitro==1){
+//                                  this.dispose();
+//                                Form f1=new Form(vaitro);
+//                                f1.setVisible(true);
+//                
+//                
+//                
+//                
+//                            }else if(vaitro==0){
+//                                 this.dispose();
+//                                 Form f1=new Form(vaitro);
+//                                f1.setVisible(true);
+//                
+//                
+//                
+//                            }else{
+//                                JOptionPane.showMessageDialog(this, "Tài khoản hoặc mật khẩu không đúng");
+//                
+//                            }
+//            
+//                    } catch (SQLException ex) {
+//                        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+//                    }
 //        String key=txtMaNV.getText();
 //        Auth.user=new EmployeeDAO().selectById(key);
 //
