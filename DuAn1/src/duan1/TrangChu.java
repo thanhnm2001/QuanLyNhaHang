@@ -103,9 +103,9 @@ public class TrangChu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-<<<<<<< OURS
 
-<<<<<<< HEAD
+
+
 
     private void btnMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuMouseClicked
         this.dispose();
@@ -120,25 +120,8 @@ public class TrangChu extends javax.swing.JFrame {
     }                                           
 
 
-    private void btnNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNhanVienActionPerformed
-        // TODO add your handling code here:
-      
-    }//GEN-LAST:event_btnNhanVienActionPerformed
+    
 
-    private void btnDangXuatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDangXuatActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_btnDangXuatActionPerformed
-
-    private void btnBanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBanActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBanActionPerformed
-=======
->>>>>>> THEIRS
-
-
-=======
->>>>>>> 9dd237efb05d3154471694d8a6123d80884ebb4e
     /**
      * @param args the command line arguments
      */
