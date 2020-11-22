@@ -5,12 +5,6 @@
  */
 package duan1;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
-
 /**
  *
  * @author dell
@@ -20,22 +14,9 @@ public class TrangNhanVien extends javax.swing.JFrame {
     /**
      * Creates new form TrangNhanVien
      */
-    DefaultTableModel model;
-    Connection cn;
     public TrangNhanVien() {
         initComponents();
         setLocationRelativeTo(null);
-        cn = Helper.ketnoi("QLNH");
-//        if(cn!= null){
-//            JOptionPane.showMessageDialog(this, "Dang nhap thanh cong");
-//        }else{
-//            JOptionPane.showMessageDialog(this,"Dang nhap that bai");
-//        }
-        model = new DefaultTableModel();
-        model = (DefaultTableModel) tblnv.getModel();
-         loadtable();
-                
-        
     }
 
     /**
@@ -57,7 +38,7 @@ public class TrangNhanVien extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblnv = new javax.swing.JTable();
+        jTable1 = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -149,15 +130,15 @@ public class TrangNhanVien extends javax.swing.JFrame {
         jButton6.setText("Tìm kiếm");
         jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, 150, 40));
 
-        tblnv.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "STT", "Mã nhân viên", "Họ tên", "Ngày sinh", "Điện thoại", "Chức vụ", "Số cmt"
+                "STT", "Tài Khoản", "Họ Tên", "Chức Vụ", "Email", "Điện Thoại", "Địa Chỉ"
             }
         ));
-        jScrollPane1.setViewportView(tblnv);
+        jScrollPane1.setViewportView(jTable1);
 
         jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 800, 340));
 
@@ -177,7 +158,7 @@ public class TrangNhanVien extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(102, 102, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/side.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/side (1).png"))); // NOI18N
         jButton1.setText("Bàn");
         jButton1.setBorderPainted(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -228,7 +209,7 @@ public class TrangNhanVien extends javax.swing.JFrame {
         });
         jPanel1.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 97, -1, -1));
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 255));
+        jButton2.setBackground(new java.awt.Color(0, 255, 51));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/side.png"))); // NOI18N
@@ -237,7 +218,7 @@ public class TrangNhanVien extends javax.swing.JFrame {
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setPreferredSize(new java.awt.Dimension(151, 40));
         jButton2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/side (3).png"))); // NOI18N
-        jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/side (1).png"))); // NOI18N
+        jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/image/side (2).png"))); // NOI18N
         jButton2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/side (1).png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -249,7 +230,6 @@ public class TrangNhanVien extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(51, 153, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/side (1).png"))); // NOI18N
         jButton3.setText("Nhân Viên");
         jButton3.setBorderPainted(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -396,32 +376,7 @@ public class TrangNhanVien extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTable tblnv;
     // End of variables declaration//GEN-END:variables
-private void loadtable() {
-    try {
-        String sql ="select * from nhanvien";
-        Statement stm = cn.createStatement();
-        ResultSet rs = stm.executeQuery(sql);
-        int stt =1;
-        while (rs.next()) {            
-               int s5 = rs.getInt(5);
-                String chucvu;
-                if (s5 == 1) {
-                    chucvu = "Quan Ly";
-                } else {
-                    chucvu = "Nhan Vien";
-                }
-            model.addRow(new Object[]{stt++,rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),
-            chucvu,rs.getString(6)});
-        }
-        rs.close();
-        stm.close();
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Loi load table");
-    }
-}
-
-
 }
