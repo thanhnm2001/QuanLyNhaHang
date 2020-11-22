@@ -27,6 +27,9 @@ public class TrangMenu extends javax.swing.JFrame {
 
     public TrangMenu() {
         initComponents();
+<<<<<<< HEAD
+       
+=======
         setLocationRelativeTo(null);
         ThongTin();
 
@@ -40,6 +43,7 @@ public class TrangMenu extends javax.swing.JFrame {
         btnMon8.setText(lstmon.get(14).getTenmon() + " " + lstmon.get(14).getDongia());
         btnMon9.setText(lstmon.get(15).getTenmon() + " " + lstmon.get(15).getDongia());
         btnMon10.setText(lstmon.get(16).getTenmon() + " " + lstmon.get(16).getDongia());
+>>>>>>> 3fa7b1da14c6021c7267c991c7d6fd717ced01e3
     }
 
     /**

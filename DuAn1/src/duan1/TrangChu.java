@@ -78,6 +78,11 @@ public class TrangChu extends javax.swing.JFrame {
         btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/menu.png"))); // NOI18N
         btnMenu.setBorderPainted(false);
         btnMenu.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/menu1.png"))); // NOI18N
+        btnMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMenuMouseClicked(evt);
+            }
+        });
         getContentPane().add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 140, 180, 90));
 
         btnBan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ban.png"))); // NOI18N
@@ -119,6 +124,20 @@ public class TrangChu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
+    private void btnMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuMouseClicked
+        this.dispose();
+        TrangMenu TM =new TrangMenu();
+        TM.setVisible(true);
+    }//GEN-LAST:event_btnMenuMouseClicked
+
+    private void btnNhanVienActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        this.dispose();
+        TrangNhanVien TNV=new TrangNhanVien();
+        TNV.setVisible(true);
+    }                                           
+
+=======
     private void btnNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNhanVienActionPerformed
         // TODO add your handling code here:
         new TrangNhanVien().setVisible(true);
@@ -133,6 +152,7 @@ public class TrangChu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBanActionPerformed
 
+>>>>>>> 3fa7b1da14c6021c7267c991c7d6fd717ced01e
     /**
      * @param args the command line arguments
      */

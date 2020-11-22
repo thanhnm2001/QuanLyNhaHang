@@ -16,7 +16,7 @@ public class Helper {
      public static Connection ketnoi(String database){
           try {
             String user = "sa";
-            String pass = "dongtuan123";
+            String pass = "123";
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             String url = "jdbc:sqlserver://DESKTOP-D3866G6:1433;databaseName="+database;
             Connection cn = DriverManager.getConnection(url, user, pass);
