@@ -68,11 +68,21 @@ public class TrangChu extends javax.swing.JFrame {
         btnNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/nhanvien.png"))); // NOI18N
         btnNhanVien.setBorderPainted(false);
         btnNhanVien.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/nhanvien1.png"))); // NOI18N
+        btnNhanVien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNhanVienActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 280, 180, 90));
 
         btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/menu.png"))); // NOI18N
         btnMenu.setBorderPainted(false);
         btnMenu.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/image/menu1.png"))); // NOI18N
+        btnMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMenuMouseClicked(evt);
+            }
+        });
         getContentPane().add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 140, 180, 90));
 
         btnBan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ban.png"))); // NOI18N
@@ -103,6 +113,18 @@ public class TrangChu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuMouseClicked
+        this.dispose();
+        TrangMenu TM =new TrangMenu();
+        TM.setVisible(true);
+    }//GEN-LAST:event_btnMenuMouseClicked
+
+    private void btnNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNhanVienActionPerformed
+        this.dispose();
+        TrangNhanVien TNV=new TrangNhanVien();
+        TNV.setVisible(true);
+    }//GEN-LAST:event_btnNhanVienActionPerformed
 
     /**
      * @param args the command line arguments

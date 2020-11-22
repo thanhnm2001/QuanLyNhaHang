@@ -16,6 +16,7 @@ public class TrangMenu extends javax.swing.JFrame {
      */
     public TrangMenu() {
         initComponents();
+       
     }
 
     /**
