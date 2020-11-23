@@ -95,7 +95,7 @@ insert into khachhang values ('KH01','THanh Nam','1991-11-11','314313143','12352
 insert into khachhang values ('KH02','Dung Nam','1991-11-11','314313143','1235213')
 insert into khachhang values ('KH03','Gdcu Nam','1991-11-11','314313143','1235213')
 select * from monan
-delete from monan
+
 insert into monan values ('MC04',N'Lẩu Gà',100000,null,N'Hoạt Động')
 insert into monan values ('MC05',N'Lẩu Bò',130000,null,N'Hoạt Động')
 insert into monan values ('MC06',N'Lẩu Hải Sản',150000,null,N'Hoạt Động')
@@ -121,7 +121,7 @@ insert into monan values ('TM03',N'Sữa Chua',15000,null,N'Hoạt Động')
 insert into monan values ('TM04',N'Chè Nhãn',20000,null,N'Hoạt Động')
 insert into monan values ('TM05',N'Pudding',25000,null,N'Hoạt Động')
 insert into monan values ('TM06',N'Chè Cốm',20000,null,N'Hoạt Động')
-delete from cthd
+
 
 
 select * from ban
